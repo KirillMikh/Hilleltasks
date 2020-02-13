@@ -13,5 +13,5 @@ def create_rle(list1):
     list2.append({list1[len(list1)-1]: count})
     return list2
 
-
+#cначала значение потом сколько раз
 print(create_rle(list1))

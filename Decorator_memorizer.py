@@ -18,7 +18,6 @@ def memorizer(f):
         if args not in cache:
             print('args not in cache')
             cache[args] = f(*args)
-            print(cache.keys())
         return cache[args]
     return decorate
 

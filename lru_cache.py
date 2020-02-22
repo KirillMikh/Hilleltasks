@@ -7,7 +7,7 @@ def my_lru_cache(my_func):
     deque1 = collections.deque([])
     calls = 0
     @wraps(my_func)
-    def wrapper(*args):
+    def wrapper(args):
         nonlocal cache_calls
         nonlocal dict_values
         nonlocal cache_size
@@ -67,7 +67,7 @@ def my_lru_cache(my_func):
 
 @my_lru_cache
 def my_function(x):
-    return x
+    return  x % 7
 
 
 a = my_function

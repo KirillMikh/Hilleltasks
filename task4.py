@@ -1,7 +1,7 @@
 a = open("file1","w")
-a.write("hfgfhfh cnh fnhcb sdskdj skd sdfg \n"
-        "sidsd sdsd qqqqqqq cgvcv cmvncmvn \n"
-        "kafka 4 words lala asasasas \n"
+a.write("kate want to eat some  burgers \n"
+        "she went to the store and bought a couple \n"
+        "such a good weather outside today\n"
          )
 a.close()
 
@@ -27,7 +27,9 @@ while line:
     b = open("newfile1", "a")
     for word in range(len(list1)):
         if index_list[word] == 0:
-            b.write(list1[word]+" ")
+            b.write(list1[word])
+            if word != len(list1)-1:
+                b.write(" ")
     b.close()
     index_list.clear()
     line = a.readline()

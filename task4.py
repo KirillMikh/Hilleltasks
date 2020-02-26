@@ -5,7 +5,7 @@ a.write("kate want to eat some  burgers \n"
          )
 a.close()
 
-b=open("newfile1","w")
+b=open("newfile2","w")
 b.close()
 a=open("file1","r")
 
@@ -24,7 +24,7 @@ while line:
         last_one=len(index_list) - 1 - index_list[::-1].index(1)
         index_list[last_one] = 0
 
-    b = open("newfile1", "a")
+    b = open("newfile2", "a")
     for word in range(len(list1)):
         if index_list[word] == 0:
             b.write(list1[word])

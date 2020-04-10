@@ -1,7 +1,6 @@
-import itertools
 def zip_generator(*args):
     min_collection = min([len(arg) for arg in args])
-    args = (tuple(i) for i in args)
+    args = [tuple(i) for i in args]
     for index in range(min_collection):
         yield tuple(collection[index] for collection in args)
 
@@ -15,18 +14,18 @@ dict1={'dictkey1':11, 'dictkey2':22}
 
 
 
-a = zip(list1,dict1)
+a = zip_generator(list1,dict1)
 for i in a:
     print(i)
 
 print('\n')
 
-a = zip(set1,set2)
+a = zip_generator(set1,set2)
 for i in a:
     print(i)
 
 print('\n')
 
-a = zip(list1,list2,tuple1)
+a = zip_generator(list1, list2, tuple1)
 for i in a:
     print(i)
